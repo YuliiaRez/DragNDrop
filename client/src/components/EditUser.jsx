@@ -9,18 +9,7 @@ const EditUser = ({ user }) => {
 
   const updateUserName = async (e) => {
     e.preventDefault();
-    // try {
-    //   const body = { name };
-    //   const response = await fetch(`http://localhost:5000/users/${user.id}`, {
-    //     method: "PUT",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(body),
-    //   });
 
-    //   window.location = "/";
-    // } catch (err) {
-    //   console.error(err.message);
-    // }
     console.log("name", name);
     updateUser(user.id, name);
     window.location = "/";
@@ -30,18 +19,14 @@ const EditUser = ({ user }) => {
     <Fragment>
       <button
         type="button"
-        className="btn btn-warning"
+        className="btn btn-primary"
         data-toggle="modal"
         data-target={`#id${user.id}`}
       >
         Edit
       </button>
-
-      {/* 
-        id = id10
-      */}
       <div
-        className="modal"
+        className="modal bg-grey"
         id={`id${user.id}`}
         onClick={() => setUserName(user.name)}
       >
