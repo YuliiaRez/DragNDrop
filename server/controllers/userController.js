@@ -11,6 +11,7 @@ class userController {
       res.send(error);
     }
   }
+
   async getAll(req, res) {
     try {
       const users = await User.findAll();
