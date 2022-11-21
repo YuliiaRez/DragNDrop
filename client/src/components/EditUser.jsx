@@ -5,12 +5,9 @@ import { updateUser } from "../http/index";
 const EditUser = ({ user }) => {
   const [name, setUserName] = useState(user.name);
 
-  //edit name function
-
   const updateUserName = async (e) => {
     e.preventDefault();
 
-    console.log("name", name);
     updateUser(user.id, name);
     window.location = "/";
   };

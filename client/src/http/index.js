@@ -18,6 +18,6 @@ export const deleteUser = async (id) => {
   return;
 };
 export const updateUser = async (id, name) => {
-  await $host.post("api/user/" + id, { name });
+  await $host.put("api/user/" + id, { name });
   return "user updated";
 };

@@ -8,18 +8,6 @@ const InputUser = () => {
     e.preventDefault();
     createUser(name);
     window.location = "/";
-    // try {
-    //   const body = { name };
-    //   const response = await fetch("http://localhost:5000/users", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(body),
-    //   });
-
-    //
-    // } catch (err) {
-    //   console.error(err.message);
-    // }
   };
 
   return (
